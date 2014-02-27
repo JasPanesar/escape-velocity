@@ -1,0 +1,7 @@
+@import url('style.css');
+@import url('extended.css');
+
+body {
+	background: none;
+	margin: 1em;
+}
