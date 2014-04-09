@@ -59,18 +59,18 @@ component extends="mura.cfobject" output="false" {
 			this.userToolsEditProfileLinkClass=this.customButtonClass;
 			this.userToolsLogoutLinkClass=this.customButtonClassAlt;
 
-			// Custom List Properties
-				this.contentListPropertyMap={
-					containerEl={tag='div'}
-					, itemEl={tag='dl'}
-					, labelEl={tag='span'}
-					, title={tag='dt', class='list-title'}
-					, date={tag='dt'}
-					, credits={tag='dd',showLabel=true,rbkey='list.by'}
-					, tags={tag='dd',showLabel=true,labelDelim=':',rbkey='tagcloud.tags'}
-					, rating={tag='dd',showLabel=true,labelDelim=':',rbkey='list.rating'}
-					, 'default'={tag='dd'}
-				};
+		// Custom List Properties
+			this.contentListPropertyMap={
+				containerEl={tag='div'}
+				, itemEl={tag='dl'}
+				, labelEl={tag='span'}
+				, title={tag='dt', class='list-title'}
+				, date={tag='dt'}
+				, credits={tag='dd',showLabel=true,rbkey='list.by'}
+				, tags={tag='dd',showLabel=true,labelDelim=':',rbkey='tagcloud.tags'}
+				, rating={tag='dd',showLabel=true,labelDelim=':',rbkey='list.rating'}
+				, 'default'={tag='dd'}
+			};
 
 
 	// custom theme methods
