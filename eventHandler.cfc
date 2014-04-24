@@ -24,21 +24,6 @@ component extends="mura.cfobject" output="false" {
 
 	}
 
-	public any function onSiteRequestStart($) {
-
-		/* cfStatic */
-		// http://dominicwatson.github.io/cfstatic/full-guide.html (See Configuration section)
-		// if in production, set checkForUpdates=false
-		/*
-		arguments.$.static(
-			outputDirectory = 'compiled'
-			, checkForUpdates = !arguments.$.siteConfig('cache')
-			, lessGlobals = ExpandPath($.siteConfig('themeAssetPath') & '/css/less-globals/globals.less')
-		);
-		*/
-
-	}
-
 	public any function onRenderStart($) {
 
 		// force Home layout template if subtype is 'Home'

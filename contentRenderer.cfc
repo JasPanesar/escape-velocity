@@ -89,6 +89,17 @@ component extends="mura.cfobject" output="false" {
 				: '';
 		}
 
+		public any function getHomeBean() {
+			return variables.$.getBean('content').loadby(filename='');
+		}
+
+		public string function dspBackgroundImage() {
+			var img = variables.$.getURLForImage(fileid=getHomeBean().getValue('headerBackgroundImage'), size='headerbackgroundimage');
+			return Len(img) 
+				? '<style>##header-wrapper{background-image:url(' & img & ');size:cover;}</style>'
+				: '';
+		}
+
 
 	// class extension specific methods
 		

@@ -52,7 +52,9 @@
 							<!-- Copyright -->
 								<div id="copyright">
 									<span>
-										&copy; #Year(Now())# #HTMLEditFormat($.siteConfig('site'))#. Design by <a href="http://html5up.net/">HTML5 UP</a>. Powered by <a href="http://www.getmura.com">Mura CMS</a>.
+										&copy; #Year(Now())# #HTMLEditFormat($.siteConfig('site'))#. 
+										Design by <a href="http://html5up.net/">HTML5 UP</a>. 
+										Powered by <a href="http://www.getmura.com">Mura CMS</a>.
 									</span>
 								</div>
 							<!-- /Copyright -->

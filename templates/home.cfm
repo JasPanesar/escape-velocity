@@ -26,7 +26,7 @@
 						<div class="12u">
 							<!-- Intro -->
 								<section id="intro">
-									#$.dspBody(bodyattribute='homeIntroBody')#
+									#$.dspBody(bodyattribute='homeIntroBody', showMetaImage=false)#
 								</section>
 							<!-- /Intro -->
 						</div>

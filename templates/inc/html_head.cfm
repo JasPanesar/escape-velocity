@@ -43,5 +43,7 @@
 		<link rel="stylesheet" href="#$.siteConfig('themeAssetPath')#/css/extended.css" />
 		<!-- Custom JavaScript -->
 		<script src="#$.siteConfig('themeAssetPath')#/js/extended.js"></script>
+
+		#$.dspBackgroundImage()#
 	</head>
 </cfoutput>
