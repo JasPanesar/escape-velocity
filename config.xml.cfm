@@ -11,7 +11,7 @@
 		<!-- used for the primary associated image -->
 		<imagesize name="bodyimage" width="1200" height="297" />
 		<imagesize name="componentheaderimage" width="347" height="177" />
-			<!-- used for the header background image -->
+		<!-- used for the header background image -->
 		<imagesize name="headerbackgroundimage" width="1920" height="573" />
 	</imagesizes>
 
