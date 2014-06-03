@@ -121,13 +121,10 @@ component extends="mura.cfobject" output="false" {
 
 	// Helpers
 		public any function dspComponent(string componentid) {
-			var bean = IsValid('uuid', arguments.componentid)
-				? variables.$.getBean('content').loadBy(contentid=arguments.componentid)
-				: variables.$.getBean('content').loadBy(title=arguments.componentid, type='Component');
-
-			return !bean.getIsNew() 
-				? variables.$.dspObject(object='component', objectid=bean.getContentID())
-				: '';
+			return variables.$.dspObject(
+				object='component'
+				, objectid=arguments.componentid
+			);
 		}
 
 		public any function dspNoFeedNotice(feedName='') {
