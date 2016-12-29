@@ -13,7 +13,7 @@
 					<img src="#img#" alt="#HTMLEditFormat($.setDynamicContent($.component('compHeading')))#" />
 				</a>
 			</cfif>
-		
+
 		<!--- Heading --->
 			<cfif Len($.component('compHeading'))>
 				<header>

@@ -12,11 +12,15 @@ component extends="mura.cfobject" output="false" {
 	*/
 
 	// contentRenderer settings
-		// GENERAL 
+		// GENERAL
 			this.jsLib = 'jquery';
 			this.jsLibLoaded = true;
 			this.suppressWhitespace = false;
 			//this.showInlineEditor=true;
+
+		// layout manager
+			this.layoutmanager=true;
+			this.legacyObjects=false;
 
 		// nav
 			this.ulTopClass = '';
@@ -26,7 +30,7 @@ component extends="mura.cfobject" output="false" {
 			this.navWrapperClass = this.generalWrapperClass;
 			this.tagCloudWrapperClass = this.generalWrapperClass;
 			//this.userToolsWrapperClass = this.generalWrapperClass;
-		
+
 		// headings
 			this.headline = 'h1';
 			this.subHead1 = 'h2';
@@ -80,7 +84,7 @@ component extends="mura.cfobject" output="false" {
 		}
 
 		public any function dspReleaseDate() {
-			return IsDate(variables.$.content('releaseDate')) 
+			return IsDate(variables.$.content('releaseDate'))
 				? LSDateFormat(variables.$.content('releaseDate'), 'long')
 				: '';
 		}
@@ -91,17 +95,17 @@ component extends="mura.cfobject" output="false" {
 
 		public string function dspBackgroundImage() {
 			var img = variables.$.getURLForImage(fileid=getHomeBean().getValue('headerBackgroundImage'), size='headerbackgroundimage');
-			return Len(img) 
+			return Len(img)
 				? '<style>##header-wrapper{background-image:url(' & img & ');size:cover;}</style>'
 				: '';
 		}
 
 
 	// class extension specific methods
-		
+
 		// helper for RSS Feeds
 			public any function convertFeedDateTime(string httpDateTime) {
-				return IsDate(arguments.httpDateTime) 
+				return IsDate(arguments.httpDateTime)
 					? LSDateFormat(ParseDateTime(arguments.httpDateTime), 'long')
 					: 'invalid';
 			}
@@ -114,8 +118,8 @@ component extends="mura.cfobject" output="false" {
 
 			public any function getLocalFeedNames() {
 				var rs = getLocalFeeds();
-				return rs.getRecordcount() 
-					? ValueList(rs.name, '^') 
+				return rs.getRecordcount()
+					? ValueList(rs.name, '^')
 					: 'No Content Collections Exist!';
 			}
 
@@ -162,7 +166,7 @@ component extends="mura.cfobject" output="false" {
 				} else if ( !totalItems ) {
 					WriteOutput(dspNoItemsNotice());
 				} else {
-					include 'class_extensions/display/componentFeedColumns.cfm';
+					include 'content_types/component_feedcolumns.cfm';
 				}
 			}
 
