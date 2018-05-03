@@ -166,7 +166,7 @@ component extends="mura.cfobject" output="false" {
 				} else if ( !totalItems ) {
 					WriteOutput(dspNoItemsNotice());
 				} else {
-					include 'content_types/component_feedcolumns.cfm';
+					include 'content_types/component_feedcolumns/index.cfm';
 				}
 			}
 

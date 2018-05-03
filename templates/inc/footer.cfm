@@ -2,7 +2,7 @@
 			This file is part of the Escape Velocity Mura CMS Theme
 --->
 <cfoutput>
-		#$.dspComponent('[ Footer ] Highlights')#
+		#$.dspObject(object='component',objectid='[ Footer ] Highlights')#
 
 		<!-- Footer Wrapper -->
 			<div id="footer-wrapper" class="wrapper">
@@ -16,7 +16,7 @@
 							<!-- Footer -->
 								<div id="footer">
 									<header class="style1">
-										#$.dspComponent('[ Footer ] Header')#
+										#$.dspObject(object='component',objectid='[ Footer ] Header')#
 									</header>
 									<hr />
 									<div>
@@ -37,7 +37,7 @@
 													<section class="footer-two">
 														<div class="feature-list feature-list-small">
 															<div>
-																#$.dspComponent('[ Footer ] Get in touch')#
+																#$.dspObject(object='component',objectid='[ Footer ] Get in touch')#
 															</div>
 														</div>
 													</section>
@@ -52,13 +52,13 @@
 							<!-- Copyright -->
 								<div id="copyright">
 									<span>
-										&copy; #Year(Now())# #HTMLEditFormat($.siteConfig('site'))#. 
-										Design by <a href="http://html5up.net/">HTML5 UP</a>. 
+										&copy; #Year(Now())# #HTMLEditFormat($.siteConfig('site'))#.
+										Design by <a href="http://html5up.net/">HTML5 UP</a>.
 										Powered by <a href="http://www.getmura.com">Mura CMS</a>.
 									</span>
 								</div>
 							<!-- /Copyright -->
-						
+
 						</div>
 					</div>
 				</div>
